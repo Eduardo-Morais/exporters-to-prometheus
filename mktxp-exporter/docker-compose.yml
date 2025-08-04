@@ -1,0 +1,9 @@
+services:
+  mktxp:
+    image: guenterbailey/mktxp
+    container_name: mktxp
+    ports:
+      - "49090:49090"
+    volumes:
+      - /home/suporte/mkt_exporter/mktxp.conf:/home/mktxp/mktxp/mktxp.conf
+      - //home/suporte/mkt_exporter/_mktxp.conf:/home/mktxp/mktxp/_mktxp.conf

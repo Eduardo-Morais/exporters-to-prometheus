@@ -1,1 +1,1 @@
-mostrarei alguns exportadores que podem facilmente serem utilizados juntamente do prometheus de forma dockeralizada
+aqui estará guardado alguns arquivos de configurações para exportadores de metricas que são utilizados pelo Prometheus para conseguir fazer o monitoramento de determinados programas ou hardwares.

@@ -1,0 +1,22 @@
+services:
+  unpoller:
+    restart: always
+    container_name: unifi_exp
+    image: ghcr.io/unpoller/unpoller
+    ports:
+      - "9130:9130"
+    environment:
+      - UP_INFLUXDB_DISABLE=true
+      - UP_POLLER_DEBUG=false
+      - UP_UNIFI_DYNAMIC=false
+      - UP_PROMETHEUS_HTTP_LISTEN=0.0.0.0:9130
+      - UP_PROMETHEUS_NAMESPACE=unpoller
+      - UP_UNIFI_CONTROLLER_0_SAVE_ALARMS=true
+      - UP_UNIFI_CONTROLLER_0_SAVE_ANOMALIES=true
+      - UP_UNIFI_CONTROLLER_0_SAVE_DPI=true
+      - UP_UNIFI_CONTROLLER_0_SAVE_EVENTS=true
+      - UP_UNIFI_CONTROLLER_0_SAVE_IDS=true
+      - UP_UNIFI_CONTROLLER_0_SAVE_SITES=true
+      - UP_UNIFI_CONTROLLER_0_URL="url de onde esta rodando o unifi"
+      - UP_UNIFI_CONTROLLER_0_USER="usuario do unifi"
+      - UP_UNIFI_CONTROLLER_0_PASS="senha do unifi"

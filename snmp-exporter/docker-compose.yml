@@ -1,0 +1,10 @@
+services:
+    snmp:
+     image: prom/snmp-exporter
+     container_name: snmp-exporter
+     ports:
+       - "9116:9116"
+     volumes:
+       - /home/suporte/snmp/snmp.yml:/etc/snmp_exporter/snmp.yml
+     environment:
+       - TIMEZONE=America/Recife

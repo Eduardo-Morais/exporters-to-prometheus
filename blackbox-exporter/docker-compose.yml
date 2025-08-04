@@ -1,0 +1,9 @@
+services:
+    blackbox:
+        image: prom/blackbox-exporter:latest
+        container_name: blackbox
+        ports:
+          - "9115:9115"
+        volumes: 
+          - /home/suporte/prometheus/blackbox:/etc/blackbox/blackbox.yml
+
